@@ -1,0 +1,369 @@
+/* ----------- RESET CSS GLOBAL ---------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*font-family: 'Poppins', sans-serif;*/
+}
+/* ----------- CUERPO ---------------*/
+body {
+    background: black;
+}
+
+/* ----------- LOGO PAGINA ---------------*/
+.logo {
+    width: 80px;
+    height: 55px;
+}
+
+/* ----------- PAGINA INDEX - MENU - CONTENIDO ---------------*/
+.iconos-image img {
+    height: 25px;
+    display: inline-block;
+}
+.menu {
+    /*font-family: 'Chathura', sans-serif;*/
+    font-family: 'Mohave', sans-serif;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 9px 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+nav ul li a {
+    color: rgb(231, 231, 231);
+    text-decoration: none;
+    font-size: 19px;
+    position: relative;
+}
+nav ul li a::after {
+    content:'';
+    width: 0;
+    height: 4px;
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    transition: 0.3s;
+}
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.content {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+.content h1 {
+    font-size: 90px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.content h1:hover {
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+}
+.content a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 24px;
+    border: 2px solid #fff;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+/* ----------- PAGINA - SERVICIOS ---------------*/
+
+.content-contenido h1 {
+    margin-top: 35%;
+    position:relative;
+    color: rgba(255, 255, 255, 0.917);
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+}
+.content-contenido p {
+    color: rgba(255, 255, 255, 0.858);
+    text-align: center;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(100,9,121,1) 29%, rgba(14,82,184,1) 100%);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.content-contenido img {
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    width: 700px;
+}
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 350px;
+    padding: 60px;
+    grid-gap: 10px;
+}
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: all 300ms;
+}
+.gallery__img:hover {
+    transform: scale(1.1);
+}
+.gallery__item:nth-child(1) {
+    grid-column-start: span 2;  
+}
+
+.gallery__item:nth-child(7) {
+    grid-row-start: span 2;  
+}
+
+@media (min-width:768px) {
+    .gallery-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .gallery__item:nth-child(1) {
+        grid-column-start: span 2;  
+    }
+    .gallery__item:nth-child(9) {
+        grid-column-start: span 2;  
+    }
+}
+/* ----------- VIDEO FONDO ---------------*/
+.background-video2 {
+    position:absolute;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 60%;
+}
+@media (min-aspect-ratio: 16/9) {
+    .background-video2 {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    .background-video2 {
+        width: auto;
+        height: 100%;
+    }
+}
+.texto-titulo h2 {
+    position: relative;
+    color: rgba(255, 255, 255, 0.917);
+    font-size: 55px;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+}
+.texto-titulo img {
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    width: 700px;
+}
+/* ----------- VIDEO YOUTUBE ---------------*/
+.video-drone {
+    margin-top: 35px;
+    justify-content: center;
+    display:flex;
+}
+.texto-drones p {
+    margin-top: 30px;
+    color: rgba(255, 255, 255, 0.858);
+    text-align: center;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    padding: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(100,9,121,1) 29%, rgba(14,82,184,1) 100%);
+    border-radius: 10px;
+}
+/* ----------- PAGINA - CONTACTO ---------------*/
+.container {
+    color: white;
+}
+/*font-family: 'Josefin Sans', sans-serif;*/
+section {
+    padding: 50px 15%;
+}
+.contact{
+    margin-top: 16%;
+    /*background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(36,31,31,1) 50%);*/
+    position: absolute;
+    width: 100%;
+    height: 100%;   
+    min-height:100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    align-items: center;
+    grid-gap: 6rem;
+}
+.contact-img img{
+    max-width:100%;
+    width: 720px;
+    height: auto;
+    border-radius: 10px;
+}
+.contact-form h1{
+    font-size: 80px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.us{ /* ----- color a pequeño porcion de codigo -----*/
+    color: #f9004d;
+}
+.contact-form p {
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    letter-spacing: 1px;
+    line-height: 26px;
+    font-size: 17px;
+    margin-bottom: 3.8rem;
+}
+.contact-form form {
+    position: relative;
+}
+.contact-form form input, form textarea {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    outline: none;
+    background: #152531;
+    color: rgb(255, 255, 255);
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+    border-radius: 10px;
+}
+.contact-form textarea {
+    resize: none;
+    height: 200px;
+}
+.contact-form form .btn { 
+    display: inline-block;
+    background: #f9004d;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: ease .20s;
+    cursor: pointer;
+    width: 200px;
+}
+.contact-form form .btn:hover {
+    border: 2px solid #f9004d;
+    background:transparent;
+    transform: scale(1.1);
+}
+@media (max-width: 1570px) {
+    section {
+        padding: 80px 3%;
+        transition: .2s;
+    }
+    .contact-form h1 {
+        font-size: 60px;
+    }
+    .contact-form p {
+        margin-bottom: 3rem;
+    }
+}
+@media (max-width: 1090px) {
+    .contact{
+        grid-gap: 2rem;
+        transition: .3s;
+    }
+}
+@media (max-width: 1000px) {
+    .contact {
+        grid-template-columns: 1fr;
+    }
+    .contact-form {
+        order: 2;
+    }
+    .contact-img img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+/* -------- PAGINA CLIENTES ------------*/
+.slider {
+    width: 75vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+.slider .slide-track {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: calc(200px * 14);
+}
+.slider .slide {
+    width: 200px;
+}
+.slider .slide img {
+    width: 100%;
+}
+@keyframes scroll {
+    0% {
+        transform:translateX(0);
+        -webkit-transform: translateX(0);
+    }
+    100% {
+        transform:translateX(calc(-200px * 7));
+        -webkit-transform: translateX(calc(-200px * 7));
+    }
+}
+.mapa {
+    position: relative;
+    margin-top: 25%;
+    left: 10%;
+    border-radius: 10%; 
+} 
+/* --------- PAGE NOSOTROS PARALLAX----------*/
+.fondonuevo img {
+    position:absolute;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 80%;
+}
